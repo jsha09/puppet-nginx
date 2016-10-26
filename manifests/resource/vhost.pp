@@ -654,6 +654,8 @@ define nginx::resource::vhost (
       location_custom_cfg_prepend => $location_custom_cfg_prepend,
       location_custom_cfg_append  => $location_custom_cfg_append,
       rewrite_rules               => $rewrite_rules,
+      auth_basic                  => $auth_basic,
+      auth_basic_user_file        => $auth_basic_user_file,
       raw_prepend                 => $location_raw_prepend,
       raw_append                  => $location_raw_append,
       notify                      => Class['nginx::service'],
